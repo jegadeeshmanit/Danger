@@ -1,0 +1,8 @@
+FROM amazonlinux
+RUN yum install wget -y
+RUN wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.33/bin/apache-tomcat-10.1.33.tar.gz
+RUN yum install tar -y
+RUN yum install gzip -y
+RUN tar -zxvf apache-tomcat-10.1.33.tar.gz
+RUN yum install java-17* -y
+RUN sh apache-tomcat-10.1.33/bin/startup.sh
