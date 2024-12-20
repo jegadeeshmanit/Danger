@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            border-bottom: 2px solid black;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .division {
+            border: 2px solid black;
+            flex: 1 1 calc(50% - 20px); /* For two columns */
+            padding: 10px;
+            min-height: 100px;
+        }
+
+        .large-division {
+            flex: 1 1 100%; /* Full width for the large division */
+            min-height: 150px;
+        }
+
+        @media (max-width: 768px) {
+            .division {
+                flex: 1 1 100%; /* Stack divisions on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">My Studio</div>
+        <div class="nav-links">
+            <!-- Add links here if needed -->
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="large-division">Navbar</div>
+        <div class="division">Backend Resources</div>
+        <div class="division">Programming Resources</div>
+        <div class="division">Frontend Resources</div>
+        <div class="division">Other Resources</div>
+    </div>
+</body>
+</html>
